@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Classifier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Spam Classifier</h1>
+        </header>
+
+        <!-- Main Input Section -->
+        <div class="main">
+            <form action="/classify" method="POST">
+                <div class="input-box">
+                    <textarea name="message" id="messageInput" placeholder="Enter your message here..."></textarea>
+                    <button type="submit">Classify</button>
+                </div>
+            </form>
+            <!-- Result Section -->
+            {% if result %}
+            <div id="result" class="result">
+                <div id="resultText">{{ result }}</div>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Spam Classifier | Built with ❤</p>
+        </footer>
+    </div>
+</body>
+</html>
